@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,10 +13,25 @@
     />
   </head>
   <body>
-    <div style="display: flex; gap: 20px;flex-wrap: wrap;justify-content: center; width: 1700px;">
+    <div
+      style="
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 1700px;
+      "
+    >
       {% for ads in all_ads %}
       <div class="card" style="width: 28rem">
+        <img
+          src="{{ads.image.url}}"
+          class="card-img-top"
+          style="width: 446px;height: 400px;"
+        />
         <div class="card-body">
+          <h5 class="card-title">{{ ads.owner }}</h5>
+          <h5 class="card-title">{{ ads.subcategory }}</h5>
           <h5 class="card-title">{{ ads.title }}</h5>
           <p class="card-text">{{ ads.description }}</p>
           <p class="card-text bg-body-tertiary" style="transform: rotate(0)">
