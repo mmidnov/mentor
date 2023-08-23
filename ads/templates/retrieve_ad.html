@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<div class="card mb-3">
+    <img src="{{ad.image.url}}" class="card-img-top" style="width: 500px;" alt="...">
+    <div class="card-body">
+        <h5>Категория: {{ad.subcategory.category.title}}, {{ad.subcategory.title}}</h5>
+        <!-- <h5>Под Категория: {{ad.subcategory.category.title}}</h5> -->
+      <h5 class="card-title">{{ad.title}}</h5>
+      <p class="card-price">ценa: {{ad.price}}</p>
+      <p class="card-owner">{{ad.owner}}</p>
+      <p class="card-text">{{ad.type}}</p>
+      <p class="card-text">{{ad.description}}</p>
+      <p class="card-text"><small class="text-body-secondary">{{ad.created_at}}</small></p>
+    </div>
+  </div>
+  
+{%endblock%}
