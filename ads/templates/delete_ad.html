@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+   <h1>Delete Ad</h1>
+
+   <form action="" method="post">
+       {%csrf_token%}
+       <button class="btn btn-sm btn-success" type="submit">Да</button>
+       <a href="{%url 'ads_list'%}"><button type="submit" class="btn btn-sm btn-danger">Отмена</button></a>
+   </form>
+
+{%endblock%}
